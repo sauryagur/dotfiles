@@ -32,13 +32,13 @@
   ... }@inputs:
     let
       system = "x86_64-linux";
-      username = "aargh";
-      hostname = "pegasus";
+      username = "saury";
+      hostname = "AlliedMastercomputer";
       opt = {
-        nvidia = true;
+        nvidia = false;
         tailscale = false;
-        vm = true;
-        llm = true;
+        vm = false;
+        llm = false;
       };
       languages = {
         c = true;
@@ -48,8 +48,8 @@
 
         go = true;
         beam = false;
-        javascript = false;
-        rust = false;
+        javascript = true;
+        rust = true;
         zig = false;
       };
       terminalworkspace = {

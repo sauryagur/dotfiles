@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 while true; do
-  status=$(cat /sys/class/power_supply/BAT1/status)
+  status=$(cat /sys/class/power_supply/BAT0/status)
   if [[ "$status" = "Discharging" ]]; then
-    battery=$(cat /sys/class/power_supply/BAT1/capacity)
+    battery=$(cat /sys/class/power_supply/BAT0/capacity)
     if [[ battery -lt 16 ]]; then
       notify-send -u critical "Very Low Battery" -i ~/.config/hypr/battery/battery_critical.png -t 5000
     elif [[ battery -lt 31 ]]; then
